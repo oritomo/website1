@@ -1,0 +1,212 @@
+$main-color:#3F51B5;
+$sub-color:#E81919;
+
+$pc: 1024px; // PC
+$tab: 767px; // タブレット
+$sp: 375px;  // スマホ
+
+@mixin pc {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: ($sp)) {
+    @content;
+  }
+}
+
+body{
+  font-family: 'Lato',  'Noto Sans JP', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+a{
+  text-decoration: none;
+  color: #333;
+  transition: 0.6s;
+  &:hover{
+    opacity:0.7 ;
+  }
+}
+.container{
+  width: 90%;
+  max-width: 980px;
+  margin: auto;
+}
+.clear::after{
+  content: "";
+  clear: both;
+  display: block;
+
+  @include tab{
+    content: none;
+  }
+}
+header{
+  width: 100%;
+  max-height: 100px;
+  background-color: $main-color;
+  padding: 20px 0;
+  position: fixed;
+  z-index: 500;
+}
+.header{
+  
+  &-top{
+    @include tab{
+      text-align: center;
+    }
+  }
+
+  &-img{
+    padding-top: 5px;
+    width: 48%;
+    vertical-align: bottom;
+    @include sp{
+      width: 80%;
+    }
+   
+  }
+  &-left{
+    width: 48%;
+    height: auto;
+    float: left;
+    @include tab{
+      float: none;
+      width: 80%;
+      margin: 0 auto;
+    }
+ 
+  }
+  &-right{
+    width: 48%;
+    float: right;
+    @include tab{
+      float: none;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+  }
+  &-nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    @include tab{
+      padding: 0;
+    }
+    @include sp{
+      padding: 0;
+    }
+  }
+
+  &-nav-item{
+    float: left;
+    & a{
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}
+
+li{
+  list-style-type: none;
+}
+#navigation{
+  position: relative;
+}
+#slide-line{
+  position: absolute;
+  height: 2px;
+  background-color:$sub-color;
+  display: block;
+}
+.top{
+  background-image: url(../img/mainvisual.png);
+  background-size: cover;
+  height: 700px;
+
+  &-title{
+    font-size: 68px;
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 249px;
+
+    @include tab{
+      font-size: 60px;
+    }
+
+    @include sp{
+      font-size: 50px;
+    }
+  }
+
+  &-subtitle{
+    font-size: 38px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: bold;
+    padding-bottom: 100px;
+
+    @include tab{
+      font-size: 32px;
+    }
+    @include sp{
+      font-size: 28px;
+      padding-bottom: 70px;
+    }
+  }
+}
+
+.button{
+  padding:10px 80px;
+  display: inline-block;
+  background-color: $main-color;
+  color: #fff;
+  font-size: 34px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  margin: 100px;
+
+  @include tab{
+    font-size: 28px;
+  }
+
+  &:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  &-ask{
+    display: block;
+    margin: auto;
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@import "card/card";
+@import "price/price";
+@import "contact/contact";
+@import "footer/footer";

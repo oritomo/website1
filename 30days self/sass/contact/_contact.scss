@@ -1,0 +1,292 @@
+.text-test {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 18px 14px;
+  width: 90%;
+  box-sizing: border-box;
+
+  @include tab{
+    margin-bottom: 10px;
+  }
+}
+
+.text-test:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+
+/*================================*/
+/*=====================================*/
+.select-test {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent url(https://haniwaman.com/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 18px 14px;
+  width: 90%;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.select-test::-ms-expand {
+  display: none;
+}
+
+.select-test:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+/*==========================================*/
+.textarea-text {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  height: 200px;
+  padding: 18px 14px;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.textarea-text:focus {
+  border: 1px solid rgba(0, 0, 0, 0.32);
+  box-shadow: none;
+  outline: none;
+}
+/*==========================================*/
+.radio-btn{
+  margin-bottom: 50px;
+}
+.radio-test {
+  display: none;
+}
+
+.radio-test + span {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.8em 0;
+  padding: 0 0 0 1.6em;
+  position: relative;
+}
+
+.radio-test + span::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 22px;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+}
+
+.radio-test + span::after {
+  -webkit-transform: translateY(-50%);
+  background: $main-color;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  content: "";
+  padding: 3px;
+  height: 8px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+  width: 8px;
+}
+
+.radio-test:checked + span::after {
+  opacity: 1;
+}
+/*==========================================*/
+.check-test {
+  display: none;
+}
+.check-btn{
+  text-align: center;
+  margin-bottom: 30px;
+  & a{
+    text-decoration: underline;
+  }
+}
+.check-test + span {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 0.2em 0;
+  padding: 0 0 0 1.2em;
+  position: relative;
+}
+
+.check-test + span::before {
+  -webkit-transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  content: "";
+  display: block;
+  height: 1em;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+}
+
+.check-test + span::after {
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+  border-bottom: 3px solid $main-color;
+  border-left: 3px solid $main-color;
+  content: "";
+  display: block;
+  height: 0.6em;
+  left: 0;
+  margin-top: -0.2em;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+  transition: all 0.3s ease 0s;
+  width: 1em;
+}
+
+.check-test:checked + span::after {
+  opacity: 1;
+}
+/*==========================================*/
+
+
+.contact{
+  background-color: #EFEFEF;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 100px;
+  &-form{
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 50px 65px;
+    height: auto;
+   
+  }
+  &-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    @include tab{
+      flex-direction: column;
+    }
+  }
+  &-inside{
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+  }
+  &-text{
+    width: 90%;
+  }
+  &-mast{
+    margin: 0;
+    font-size: 14px;
+    background-color: $sub-color;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 10px;
+    // margin-bottom: 15px;
+  }
+  &-des{
+    line-height: 1;
+    width: 30%;
+    margin-bottom: 10px;
+    @include tab{
+      width: 100%;
+    }
+  }
+}
+
+
+
+.modal{
+  display: block;
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 999;
+  & a{
+    text-decoration: none;
+  }
+}
+.modal__bg{
+  background: rgba(0,0,0,0.8);
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.modal__content{
+  background: #fff;
+  left: 50%;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  height: auto;
+}
+.modal-title{
+  font-size: 18px;
+  padding-top: 0;
+  padding-bottom: 15px;
+}
+.modal-midashi{
+  border-left: 4px solid $main-color;
+  text-align: left;
+  font-size: 16px;
+  padding-left:10px;
+}
+.modal-text{
+  text-align: left;
+}
+.modal-button{
+  font-size: 18px;
+  font-weight: normal;
+  text-decoration: none;
+  margin: 20px auto 0;
+}
+h5>a{
+  text-decoration: none;
+}

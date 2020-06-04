@@ -1,0 +1,125 @@
+
+.price{
+  background-color: #EFEFEF;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: auto;
+  @include tab{
+    flex-direction: column;
+  }
+
+  &-cap{
+    text-align: center;
+    padding-bottom: 100px;
+    & a{
+      text-decoration: underline;
+    }
+  }
+  &-img{
+    width: 35%;
+    height: auto;
+    @include tab{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  &-list{
+    border: 1px solid #707070;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 55%;
+    @include tab{
+      width: 100%;
+    }
+    & th,td{
+      border: 1px solid #707070;
+    }
+  }
+
+}
+
+th{
+  background-color: #999999;
+  color: #fff;
+  padding: 13px 30px;
+  @include sp{
+    padding: 5px 15px;
+  }
+  // text-align: center;
+  &:first-child{
+    width: 20%;
+   
+  }
+  &:nth-child(2){
+    width: 40%;
+  }
+  &:nth-child(3){
+    width: 40%;
+  }
+}
+td{
+  padding: 13px 30px;
+  text-align: right;
+  background-color: #fff;
+  @include sp{
+    padding: 5px 15px;
+  }
+}
+
+.cheap{
+  color: $sub-color;
+}
+
+.iframe-wrap{
+  position: relative;
+  width: 100%;
+  padding-top: 50%;
+  margin-bottom: 20px;
+}
+.iframe-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.place{
+  display: flex;
+  &-cap{
+    width: 100px;
+    padding: 0;
+  }
+  &-des{
+    width: calc(100% - 100px);
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.btn-map{
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin-bottom: 100px;
+  margin-top: 20px;
+}
+.forbtn{
+  text-align: center;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+.time{
+  background-color: #EFEFEF;
+  &-list{
+    border: 1px solid #707070;
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+}

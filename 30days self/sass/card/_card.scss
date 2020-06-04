@@ -1,0 +1,158 @@
+.card{
+  background-color: #EFEFEF;
+}
+.container1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.section{
+  &-title{
+    font-size: 60px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    // border-bottom: 5px solid $main-color;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 1em;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      display: inline-block;
+      width: 76px;/*線の長さ*/
+      height: 5px;/*線の太さ*/
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);/*位置調整*/
+      background-color: $main-color;/*線の色*/
+      border-radius: 2px;/*線の丸み*/
+      z-index: 800;
+    }
+
+    @include tab{
+      font-size: 50px;
+    }
+    @include sp{
+      font-size: 40px;
+    }
+    &-for{
+      text-align: center;
+    }
+  }
+}
+
+
+.flex{
+  &-item{
+    width: 30%;
+    background-color: #fff;
+    padding: 10px;
+    margin: 20px 0;
+    height: 355px;
+    @include tab{
+      width: calc(50% - 40px);
+    }
+    @include sp{
+      width: 100%;
+    }
+  }
+  &-title{
+    font-weight: normal;
+    font-size: 20px;
+  }
+  &-text{
+    font-size: 16px;
+  }
+}
+
+dl{
+  max-width: 850px;
+  margin: 0 auto;
+}
+dt{
+  line-height: 45px;
+  flex-shrink: 1;
+  font-size: 16px;
+  min-width: 100px;
+  padding: 10px 0;
+  @include tab{
+    padding-bottom: 0;
+    width: 100px;
+  }
+}
+dd{
+  line-height: 45px;
+  font-size: 16px;
+  padding: 10px 0;
+  &:nth-child(odd){
+    float: right;
+  }
+}
+
+.label{
+  flex-shrink: 1;
+  min-width: 100px;
+  margin-left: 30px;
+  & a{
+    background-color: #666666;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    
+  }
+
+  @include tab{
+    margin-left: 0;
+    padding: 0;
+    width: 150px;
+  }
+}
+.news-hover{
+  transition: 0.6s;
+  &:hover{
+    opacity: 0.5;
+  }
+}
+.news-text{
+  flex-grow: 8;
+  margin-left: 30px;
+  align-items: center;
+  max-width: 576px;
+
+  @include tab{
+    margin-left: 0;
+  }
+}
+.news-wrapper {
+  display: flex;
+  &+.news-wrapper{
+    border-top: 1px solid #707070;
+  }
+  @include tab{
+    flex-direction: column;
+  }
+}
+
+.wantcolor1 a{
+  background-color: $main-color;
+}
+.wantcolor2 a{
+  background-color:$sub-color;
+}
+.wantcolor3 a{
+  background-color: $main-color;
+}
+
+.forbotton{
+  width: 60px;
+  margin: 40px auto;
+}
+.more{
+  color: $sub-color;
+  font-weight: bold;
+}
